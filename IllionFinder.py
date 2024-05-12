@@ -233,6 +233,8 @@ def california():
                 print("This is the",str(number)+ "rd illion and it has", (number * 3) + 4, "digits!")
         else:
                 print("This is the",str(number)+ "th illion and it has", (number * 3) + 4, "digits!")
+        f = open("whichillionlogs.txt", "a+")
+        f.write(str(number) + ", "+ str((number * 3) + 4) + "\n")
 def choosing(x):
     if x < 100:
         option = input("Choose App: IllionFinder(i) or WhichIllion(w): ")
