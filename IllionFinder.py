@@ -160,7 +160,7 @@ def florida():
                                                                                                                                                                                                             ).replace("0", "" 
                                                                                                                                                                                                                 ) + "llion"
 
-            print("Your illion's pronunciation is:", y)
+            print("Your illion's name is:", y)
             f = open("illionlogs.txt", 'a+')
             f.write(str(number) + ", " + str(y) + ", " + str(var)  + ", " + str(a) +"\n")
 def california(): 
