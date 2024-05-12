@@ -55,28 +55,28 @@ def florida():
     
     number = input("Input a number: ")
     a = 0
-    
+    number = number.replace(",", "")
     for i in number:
         if a == 0 and i == "0":
             print("Numbers can't start with a 0 you silly!")
         a += 1
-    
-    if a < 3003:
+    print(number)
+    """if a < 3003:
         try:
             int(number) * 1
         except ValueError:
-            print("Please try a number next time.")
+            print("The string you entered has a non-numerical character in it. please try again.")
+            return"""
+
+    for i in number:
+        if i.isalpha():
+            print("The string you entered has a non-numerical character in it. please try again.")
             return
-    elif a >= 3003:
-         for i in number:
-              if i.isalpha():
-                   print("The string you entered has a non-numerical character in it. please try again.")
-                   return
-              elif i in s or i in zedre:
-                   print("The string you entered has a non-numerical character in it. please try again.")
-                   return
+        elif i in s or i in zedre:
+            print("The string you entered has a non-numerical character in it. please try again.")
+            return
          
-    print(a)
+    print("Digits:",a)
     if a < 7:
         print("The Number you entered is not long enough.")
     else:  
@@ -162,10 +162,11 @@ def florida():
 
             print("Your illion's pronunciation is:", y)
             f = open("illionlogs.txt", 'a+')
-            f.write(number + ", " + y + ", " + str(var) +"\n")
+            f.write(str(number) + ", " + str(y) + ", " + str(var)  + ", " + str(a) +"\n")
 def california(): 
         var12 = input("Enter Illion Pronunciation: ")
         var12 = var12.lower()
+        var12 = var12.replace(" ", "")
         number = 0
         var12 = var12.replace("llion", ""
                         ).replace("nonimyri", "I"
@@ -225,13 +226,13 @@ def california():
                 randomlist.append(i)
         print(*randomlist)
         if randomlist[0] == "@" and randomlist[1] != "2":
-                print("This is the",str(number)+ "st illion")
+                print("This is the",str(number)+ "st illion and it has", (number * 3) + 4, "digits!")
         elif randomlist[0] == "#" and randomlist[1] != "2":
-                print("This is the",str(number)+ "nd illion")
+                print("This is the",str(number)+ "nd illion and it has", (number * 3) + 4, "digits!")
         elif randomlist[0] == "$" and randomlist[1] != "2":
-                print("This is the",str(number)+ "rd illion")
+                print("This is the",str(number)+ "rd illion and it has", (number * 3) + 4, "digits!")
         else:
-                print("This is the",str(number)+ "th illion")
+                print("This is the",str(number)+ "th illion and it has", (number * 3) + 4, "digits!")
 def choosing(x):
     if x < 100:
         option = input("Choose App: IllionFinder(i) or WhichIllion(w): ")
