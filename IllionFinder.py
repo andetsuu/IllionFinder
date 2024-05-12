@@ -82,23 +82,23 @@ def florida():
     else:  
         var = (a - 4)//3
         if var == 1:
-            print("Your number is the first illion and it is pronunced as million!")
+            print("Your number is the first illion and it's name is a million!")
         elif var == 2:
-            print("Your number is the second illion and it is pronunced as billion!!")
+            print("Your number is the second illion and it's name is a billion!!")
         elif var == 3:
-            print("Your number is the third illion and it is pronunced as trillion!!!")
+            print("Your number is the third illion and it's name is a trillion!!!")
         elif var == 4:
-            print("Your number is the fourth illion and it is pronunced as quadrillion!!!")
+            print("Your number is the fourth illion and it's name is a quadrillion!!!")
         elif var == 5:
-            print("Your number is the fifth illion and it is pronunced as quintillion!!!")
+            print("Your number is the fifth illion and it's name is a quintillion!!!")
         elif var == 6:
-            print("Your number is the sixth illion and it is pronunced as sextillion!!!")
+            print("Your number is the sixth illion and it's name is a sextillion!!!")
         elif var == 7:
-            print("Your number is the seventh illion and it is pronunced as septillion!!!")
+            print("Your number is the seventh illion and it's name is a septillion!!!")
         elif var == 8:
-            print("Your number is the eighth illion and it is pronunced as octollion!!!")
+            print("Your number is the eighth illion and it's name is a octollion!!!")
         elif var == 9:
-            print("Your number is the ninth illion and it is pronunced as nonillion!!!")
+            print("Your number is the ninth illion and it's name is a nonillion!!!")
         elif var >= 10:
             print("Illion:",var)
             illion = str(var)
@@ -164,7 +164,7 @@ def florida():
             f = open("illionlogs.txt", 'a+')
             f.write(str(number) + ", " + str(y) + ", " + str(var)  + ", " + str(a) +"\n")
 def california(): 
-        var12 = input("Enter Illion Pronunciation: ")
+        var12 = input("Enter Illion Name: ")
         var12 = var12.lower()
         var12 = var12.replace(" ", "")
         number = 0
