@@ -204,8 +204,15 @@ def california():
                                                                                                                                                                                                                                                                                                                                                                                                                                                                 )
 
         randomlist = []
+        agabugu = 0
         for i in var12:
-                number += translate[i]
+                try:
+                    number += translate[i]
+                except KeyError:
+                     if agabugu == 0:
+                        print("The word you entered is not a valid illion :()")
+                        agabugu += 1
+                     return
                 randomlist.append(i)
         print(*randomlist)
         if randomlist[0] == "@" and randomlist[1] != "2":
