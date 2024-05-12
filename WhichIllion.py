@@ -1,5 +1,5 @@
 #var = "trevigintitrucentidumillinioctomyrillion"
-var = input("Enter Illion Pronunciation")
+var = input("Enter Illion Pronunciation: ")
 var = var.lower()
 translate = {
     "A": 10000,
