@@ -1,4 +1,4 @@
-print("*** Illion Finder & WhichIllion ***")
+print("***Illion Finder & WhichIllion***")
 translate = {
     "A": 10000,
     "B": 20000,
@@ -50,6 +50,9 @@ translate = {
 }
 
 def florida():
+    s = "[@_!#$%^&*()<>?/\|}{~:]'"
+    zedre = '[@_!#$%^&*()<>?/\|}{~:]"'
+    
     number = input("Input a number: ")
     a = 0
     
@@ -57,13 +60,23 @@ def florida():
         if a == 0 and i == "0":
             print("Numbers can't start with a 0 you silly!")
         a += 1
-    print(a)
+    
     if a < 3003:
         try:
             int(number) * 1
         except ValueError:
             print("Please try a number next time.")
             return
+    elif a >= 3003:
+         for i in number:
+              if i.isalpha():
+                   print("The string you entered has a non-numerical character in it. please try again.")
+                   return
+              elif i in s or i in zedre:
+                   print("The string you entered has a non-numerical character in it. please try again.")
+                   return
+         
+    print(a)
     if a < 7:
         print("The Number you entered is not long enough.")
     else:  
@@ -148,9 +161,8 @@ def florida():
                                                                                                                                                                                                                 ) + "llion"
 
             print("Your illion's pronunciation is:", y)
-
             f = open("illionlogs.txt", 'a+')
-            f.write(number + ", " + y + "\n")
+            f.write(number + ", " + y + ", " + str(var) +"\n")
 def california(): 
         var12 = input("Enter Illion Pronunciation: ")
         var12 = var12.lower()
@@ -204,14 +216,11 @@ def california():
                                                                                                                                                                                                                                                                                                                                                                                                                                                                 )
 
         randomlist = []
-        agabugu = 0
         for i in var12:
                 try:
                     number += translate[i]
                 except KeyError:
-                     if agabugu == 0:
-                        print("The word you entered is not a valid illion :()")
-                        agabugu += 1
+                     print("The string you entered has a non-numerical character in it. please try again.")
                      return
                 randomlist.append(i)
         print(*randomlist)
